@@ -1,0 +1,75 @@
+.Authentication {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Authentication > div {
+  height: 100vh;
+}
+
+.Authentication > div:first-child {
+  background-image: url("../../../assets/bg.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Authentication > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Authentication > div:last-child > div > form > input,
+.Authentication > div:last-child > div > form > button {
+  height: 1.8rem;
+  margin: 0.5rem 0;
+  outline: none;
+  border: none;
+}
+
+.Authentication > div:last-child > div > form > input {
+  padding: 0 0.5rem;
+  color: white;
+  background: transparent;
+  border-bottom: 1px solid white;
+}
+
+.Authentication > div:last-child > div > form > input:focus {
+  border-bottom: 1px solid #147edf;
+}
+
+.Authentication > div:last-child > div > form > button {
+  font-weight: bold;
+  color: white;
+  background-color: #147edf;
+  border: 1px solid #147edf;
+  cursor: pointer;
+}
+
+.Authentication > div:last-child > div > form > button:nth-last-child(1) {
+  background-color: #ff2f0b;
+  border: 1px solid #ff2f0b;
+}
+
+.Authentication > div:last-child > div > form > button:active {
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 700px) {
+  .Authentication {
+    grid-template-columns: 1fr;
+  }
+
+  .Authentication > div:first-child {
+    display: none;
+  }
+  .Authentication > div:last-child {
+    background-image: url("../../../assets/bg.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
