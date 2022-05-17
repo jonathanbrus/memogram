@@ -21,7 +21,7 @@ import {
 } from "@mui/icons-material";
 import ChevronRightRounded from "@mui/icons-material/ChevronRightRounded";
 
-import { ui } from "../../data/store/actions";
+import { postsActions, ui } from "../../data/store/actions";
 import { authService } from "../../services/authentication";
 
 export const AppDrawer = (props) => {
@@ -40,7 +40,7 @@ export const AppDrawer = (props) => {
 
   const showFav = () => {
     closeDrawer();
-    dispatch({});
+    dispatch({ type: postsActions.TOGGLE });
   };
 
   const toSearch = () => {
